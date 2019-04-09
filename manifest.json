@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "autoinput",
+    "description": "Tokyotech Portal autoinput",
+    "version": "0.0",
+    "browser_action": {
+        "default_title": "AutoInput"
+    },
+    "content_scripts": [
+        {
+            "matches":  ["https://portal.nap.gsic.titech.ac.jp/GetAccess/*/*"],
+            "js": ["input.js"]
+        }
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    },
+    "permissions": [
+        "tabs"
+    ]
+}
